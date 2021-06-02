@@ -34,7 +34,7 @@ const fetchWeather = async () => {
     return;
   } else {
     await fetch(
-      `https:\\api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${key}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${key}`
     )
       .then((response) => {
         if (response.ok) {
