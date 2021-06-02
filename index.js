@@ -1,6 +1,7 @@
 const submitButtom = document.getElementById("submitButtom");
 const modalButtom = document.querySelector(".modal-buttom-close");
 const modalErrorDom = document.querySelector(".modal-error");
+const itemClose = document.getElementById("#button-item");
 
 const add = (data) => {
   console.log(data);
@@ -20,6 +21,7 @@ const add = (data) => {
       <p>Temperature:  ${data.main.temp}°C</p>
       <p>Longitud: ${data.coord.lon}</p>
       <p>Latitud: ${data.coord.lat}</p>
+      <button id=button-item type="button">X</button>
       </div>
       `)
   );
@@ -57,11 +59,19 @@ const closeModal = (e) => {
   }
 };
 
+const closeItem = (e) => {
+  if (e.target.id === "button-item") {
+    e.target.parentNode.parentNode.remove();
+  }
+};
+
 window.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     fetchWeather();
   }
 });
+
+window.addEventListener("click", closeItem);
 
 submitButtom.addEventListener("click", fetchWeather);
 modalButtom.addEventListener("click", closeModal);

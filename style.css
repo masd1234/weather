@@ -118,7 +118,7 @@ body {
 .icon {
   margin: 0 auto;
   text-align: center;
-  height: 6rem;
+  height: 5rem;
   width: 6rem;
 }
 
@@ -131,6 +131,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#button-item {
+  border: none;
+  background: transparent;
+  margin-top: 0.2rem;
+  color: red;
+  transition: 1s;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+}
+
+#button-item:hover {
+  background: red;
+  color: whitesmoke;
 }
 
 .modal-error {
