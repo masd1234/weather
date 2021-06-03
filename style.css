@@ -79,12 +79,11 @@ body {
   flex-grow: 1;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  align-content: space-evenly;
   flex-wrap: wrap;
-  overflow: scroll;
-  gap: 1rem;
+  overflow: auto;
+  gap: 2rem;
 }
 
 .item-container {
@@ -198,7 +197,7 @@ body {
   }
 
   .container-inputs {
-    height: 20%;
+    height: 30%;
     font-size: 1.2rem;
   }
 
